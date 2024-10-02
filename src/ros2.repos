@@ -1,0 +1,10 @@
+# List of repositories to use within your workspace
+# See https://github.com/dirk-thomas/vcstool
+############ 
+# Example:
+############
+repositories:
+  mediapipe_ros_pkg:
+    type: git
+    url: https://github.com/moosan6363/mediapipe_ros_pkg.git
+    version: main
