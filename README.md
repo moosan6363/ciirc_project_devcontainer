@@ -131,7 +131,7 @@ ros2 launch realsense2_camera rs_launch.py pointcloud.enable:=true
 To create a ROS2 node for the mediapipe, run the following commands in the terminal:
 
 ```console
-ros2 run mediapipe_ros mediapipe_node
+ros2 run mediapipe_ros_pkg mediapipe_node
 ```
 
 ## Rviz
