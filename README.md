@@ -124,7 +124,7 @@ To build the workspace, run the following commands in the terminal:
 To create a ROS2 node for the realsense camera, run the following commands in the terminal:
 
 ```console
-ros2 launch realsense2_camera rs_launch.py pointcloud.enable:=true
+ros2 launch realsense2_camera rs_launch.py enable_rgbd:=true enable_sync:=true align_depth.enable:=true enable_color:=true enable_depth:=true
 ```
 
 ## Mediapipe
