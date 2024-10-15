@@ -141,6 +141,19 @@ To visualize the topics, run the following commands in the terminal:
 ros2 run rviz2 rviz2
 ```
 
+## rosbag2
+To record the topics, run the following commands in the terminal:
+
+```console
+ros2 bag record -a
+```
+
+If you want to convert the rosbag2 file to a video file, run the following commands in the terminal:
+
+```console
+python3 src/ros2bag2video.py --fps=30 --rate=1.0 -t <your_topic> <folder>
+```
+
 # Credits
 I was very much insprired by Allison Thackston's [article](https://www.allisonthackston.com/articles/docker-development.html), 
 the [ROS 2 documentation on using docker](https://docs.ros.org/en/humble/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html#),
