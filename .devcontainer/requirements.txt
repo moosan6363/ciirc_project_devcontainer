@@ -2,3 +2,4 @@ matplotlib == 3.9.2
 scikit-learn == 1.5.2
 mediapipe == 0.10.15
 pyrealsense2 == 2.55.1.6486
+filterpy == 1.4.5

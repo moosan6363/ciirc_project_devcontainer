@@ -18,6 +18,10 @@ start it with `code` or with `code /rel/path/to/workspace` (often `code .`)
 
 For updating, just donwload the new version and install over the old with the same command.
 
+### Plugins
+
+- Dev Containers
+
 ## Docker
 
 Docker is a container engine that is often used to deploy pieces of software with their specific 
@@ -71,29 +75,15 @@ Now log out and in. Try if docker works without `sudo`:
 docker run hello-world
 ```
 
-## VSCode
-
-Download the package for your distribution (it is `.deb` for Ubuntu) from 
-https://code.visualstudio.com/
-```console
-sudo dpkg -i code_<VERSION>_amd64.deb
-```
-start it with `code` or with `code /rel/path/to/workspace` (often `code .`)
-
-### Plugins
-
-- Dev Containers
-
-
 # Installation
 
 clone this repo to a folder of your choice. this will become the ROS 2 workspace and also be mapped to the container.
-`git clone git@github.com:JKBehrens/ros_humble_dev_container.git`
+`git clone git@github.com:moosan6363/ciirc_project_devcontainer.git`
 
-`cd ros_humble_dev_container`
+`cd ciirc_project_devcontainer`
 
 
-Open VSCode and open the folder `ros_humble_dev_container`. Reopen the folder in the devcontainer (click on the small green box in the bottom left).
+Open VSCode and open the folder `ciirc_project_devcontainer`. Reopen the folder in the devcontainer (click on the small green box in the bottom left).
 
 # ROS2
 
@@ -116,32 +106,33 @@ git push -u origin main
 To build the workspace, run the following commands in the terminal:
   
 ```console
-./setup.sh
-./build.sh
+./setup.sh && ./build.sh
 ```
 
-## Realsense
+## Node Examples
+
+### Realsense
 To create a ROS2 node for the realsense camera, run the following commands in the terminal:
 
 ```console
 ros2 launch realsense2_camera rs_launch.py enable_rgbd:=true enable_sync:=true align_depth.enable:=true enable_color:=true enable_depth:=true
 ```
 
-## Mediapipe
+### Mediapipe
 To create a ROS2 node for the mediapipe, run the following commands in the terminal:
 
 ```console
 ros2 run mediapipe_ros_pkg mediapipe_node
 ```
 
-## Rviz
+### Rviz
 To visualize the topics, run the following commands in the terminal:
 
 ```console
 ros2 run rviz2 rviz2
 ```
 
-## rosbag2
+### rosbag2
 To record the topics, run the following commands in the terminal:
 
 ```console
