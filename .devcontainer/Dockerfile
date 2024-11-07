@@ -105,6 +105,12 @@ RUN apt-get update && apt-get install -y git-core bash-completion \
   && echo "if [ -f ${WORKSPACE}/install/setup.bash ]; then source ${WORKSPACE}/install/setup.bash; fi" >> /home/$USERNAME/.bashrc \
   && rm -rf /var/lib/apt/lists/*
 
+###########################################
+#  Custom image
+###########################################
+FROM dev AS custom
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update \
     && apt-get install -y \
     ros-${ROS_DISTRO}-rviz2 \

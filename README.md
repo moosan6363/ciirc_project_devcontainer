@@ -85,6 +85,10 @@ clone this repo to a folder of your choice. this will become the ROS 2 workspace
 
 Open VSCode and open the folder `ciirc_project_devcontainer`. Reopen the folder in the devcontainer (click on the small green box in the bottom left).
 
+## Coppelia
+Download from [here](https://coppeliarobotics.com/#download). Choose Ubnutu 22.04. 
+And you place this application to "/home/ws/CoppeliaSim". 
+
 # ROS2
 
 ## Package Creation
@@ -122,7 +126,8 @@ ros2 launch realsense2_camera rs_launch.py enable_rgbd:=true enable_sync:=true a
 To create a ROS2 node for the mediapipe, run the following commands in the terminal:
 
 ```console
-ros2 run mediapipe_ros_pkg mediapipe_node
+ros2 run mediapipe_ros_pkg mediapipe_gesture_publisher
+ros2 run mediapipe_ros_pkg mediapipe_objectron_publisher
 ```
 
 ### Rviz
