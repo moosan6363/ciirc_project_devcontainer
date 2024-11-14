@@ -123,18 +123,31 @@ ros2 launch realsense2_camera rs_launch.py enable_rgbd:=true enable_sync:=true a
 ```
 
 ### Mediapipe
+To download the objectron model, run the following commands in the terminal:
+
+```console
+sudo python3 src/mediapipe_ros_pkg/mediapipe_ros_pkg/objectron_model_downloader.py
+```
+
 To create a ROS2 node for the mediapipe, run the following commands in the terminal:
 
 ```console
 ros2 run mediapipe_ros_pkg mediapipe_gesture_publisher
 ros2 run mediapipe_ros_pkg mediapipe_objectron_publisher
+ros2 run mediapipe_ros_pkg gesture_objectron_integrate_publisher
+```
+
+Or you can create a ROS2 node by launch. To do this, run the following commands in the terminal:
+
+```console
+ros2 launch mediapipe_ros_pkg mp_launch.yaml
 ```
 
 ### Rviz
 To visualize the topics, run the following commands in the terminal:
 
 ```console
-ros2 run rviz2 rviz2
+ros2 run rviz2 rviz2 -d ./src/mediapipe_ros_pkg/rviz2/mediapipe_ros_pkg.rviz
 ```
 
 ### rosbag2
