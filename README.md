@@ -116,11 +116,21 @@ To build the workspace, run the following commands in the terminal:
 ## Node Examples
 
 ### Realsense
+To confirm secure boot is disable. 
+
 To create a ROS2 node for the realsense camera, run the following commands in the terminal:
 
 ```console
-ros2 launch realsense2_camera rs_launch.py enable_rgbd:=true enable_sync:=true align_depth.enable:=true enable_color:=true enable_depth:=true
+ros2 launch realsense2_camera rs_launch.py enable_rgbd:=true enable_sync:=true align_depth.enable:=true enable_color:=true enable_depth:=true camera_name:=side_camera serial_no:=_213522251272
 ```
+
+Or you can create a ROS2 node by launch. To do this, run the following commands in the terminal:
+(must rewrite the serial_no)
+
+```console
+ros2 launch mediapipe_ros_pkg camera_launch.py
+```
+
 
 ### Mediapipe
 To download the objectron model, run the following commands in the terminal:
@@ -134,7 +144,8 @@ To create a ROS2 node for the mediapipe, run the following commands in the termi
 ```console
 ros2 run mediapipe_ros_pkg mediapipe_gesture_publisher
 ros2 run mediapipe_ros_pkg mediapipe_objectron_publisher
-ros2 run mediapipe_ros_pkg gesture_objectron_integrate_publisher
+ros2 run mediapipe_ros_pkg mediapipe_head_direction_publisher
+ros2 run mediapipe_ros_pkg pointed_object_probability_publisher
 ```
 
 Or you can create a ROS2 node by launch. To do this, run the following commands in the terminal:
