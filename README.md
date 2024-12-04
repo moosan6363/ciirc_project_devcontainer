@@ -137,14 +137,16 @@ To download the objectron model, run the following commands in the terminal:
 
 ```console
 sudo python3 src/mediapipe_ros_pkg/mediapipe_ros_pkg/objectron_model_downloader.py
+wget https://cloud.ovgu.de/s/Q67RnLDy6JKLRWm/download/6DRepNet_300W_LP_AFLW2000.pth
 ```
 
 To create a ROS2 node for the mediapipe, run the following commands in the terminal:
 
 ```console
-ros2 run mediapipe_ros_pkg mediapipe_gesture_publisher
+ros2 run mediapipe_ros_pkg mediapipe_hand_pose_publisher
 ros2 run mediapipe_ros_pkg mediapipe_objectron_publisher
-ros2 run mediapipe_ros_pkg mediapipe_head_direction_publisher
+ros2 run mediapipe_ros_pkg mediapipe_head_pose_publisher
+ros2 run mediapipe_ros_pkg sixdrepnet_head_pose_publisher
 ros2 run mediapipe_ros_pkg pointed_object_probability_publisher
 ```
 

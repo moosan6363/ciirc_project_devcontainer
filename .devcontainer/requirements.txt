@@ -7,3 +7,5 @@ tensorflow == 2.18.0
 filterpy == 1.4.5
 mediapipe == 0.10.15
 pyrealsense2 == 2.55.1.6486
+sixdrepnet == 0.1.6
+face-detection @ git+https://github.com/elliottzheng/face-detection.git@master
