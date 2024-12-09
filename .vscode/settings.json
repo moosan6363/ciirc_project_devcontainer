@@ -21,4 +21,8 @@
         "**/log": true
     },
     "USERNAME": "${env:USER}",
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    }
 }
