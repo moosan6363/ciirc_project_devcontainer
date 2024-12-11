@@ -146,14 +146,17 @@ To create a ROS2 node for the mediapipe, run the following commands in the termi
 ros2 run mediapipe_ros_pkg mediapipe_hand_pose_publisher
 ros2 run mediapipe_ros_pkg mediapipe_objectron_publisher
 ros2 run mediapipe_ros_pkg mediapipe_head_pose_publisher
+ros2 run mediapipe_ros_pkg yolo_object_detection_publisher
 ros2 run mediapipe_ros_pkg sixdrepnet_head_pose_publisher
 ros2 run mediapipe_ros_pkg pointed_object_probability_publisher
+ros2 run mediapipe_ros_pkg logic
 ```
 
 Or you can create a ROS2 node by launch. To do this, run the following commands in the terminal:
 
 ```console
 ros2 launch mediapipe_ros_pkg mp_launch.yaml
+ros2 topic pub /pointed_object/send_action std_msgs/Empty --once
 ```
 
 ### Rviz
@@ -168,6 +171,7 @@ To record the topics, run the following commands in the terminal:
 
 ```console
 ros2 bag record -a
+ros2 bag record /rosout /tf /tf_static /mediapipe/hand/pose /mediapipe/hand/annotated_image /sixdrepnet/head/pose /sixdrepnet/head/annotated_image /yolo/object_detection/annotated_image /yolo/object_detection/marker_array /pointed_object/marker_array /pointed_object/send_action
 ```
 
 If you want to convert the rosbag2 file to a video file, run the following commands in the terminal:
